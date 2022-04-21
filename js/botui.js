@@ -26,11 +26,11 @@ function bot_ui_ini() {
     }).then(function () {
         botui.message.add({
             delay: 1100,
-            content: "这里是 Robert"
+            content: "俺是晏几台"
         }).then(function () {
             botui.message.add({
                 delay: 1100,
-                content: "一个可爱的蓝孩子~"
+                content: "一个喜欢瞎琢磨的蓝孩子~"
             }).then(function () {
                 botui.action.button({
                     delay: 1600,
@@ -65,7 +65,7 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "2020年毕业于沧州交通学院"
+                content: "2020年毕业于北京交通大学海滨学院"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
@@ -81,7 +81,7 @@ function bot_ui_ini() {
                         }).then(function () {
                             botui.message.add({
                                 delay: 1500,
-                                content: "研究的方向，是图像处理（image processing）以及机器学习（machine learning）"
+                                content: "研究的方向，是Java全栈开发以及独立游戏制作"
                             }).then(function () {
                                 botui.message.add({
                                     delay: 1800,
@@ -90,7 +90,7 @@ function bot_ui_ini() {
                                     botui.action.button({
                                         delay: 1100,
                                         action: [{
-                                            text: "为什么叫Robert呢？ 🤔",
+                                            text: "为什么叫晏几台呢？ 🤔",
                                             value: "why-mashiro"
                                         }]
                                     }).then(function (a) {
@@ -106,7 +106,7 @@ function bot_ui_ini() {
         thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "RobertCarlson传闻是某个外星人的名字，我还是比较相信外星文明的存在的！"
+                content: "说起来是一段回忆，这名字算是有我青春的痕迹吧~"
             }).then(function () {
                 botui.action.button({
                     delay: 1500,
