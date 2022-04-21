@@ -179,12 +179,11 @@ function imgError (ele, type) {
       ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/default_gavatar.jpg'
       break
     case 3:
-      ele.src='https://b2.kuibu.net/file/imgdisk/imgs/2022/04/99c8e2b18e242f12.jpg'
-      // ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
+
+      ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
       break
     default:
-      // ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
-      ele.src='https://b2.kuibu.net/file/imgdisk/imgs/2022/04/99c8e2b18e242f12.jpg'
+      ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
   }
 }
 mashiro_global.post_list_show_animation = new function () {
