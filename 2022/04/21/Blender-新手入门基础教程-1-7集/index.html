@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Blender 新手入门基础教程(1-7集) | APingStudio</title>
+  
+    <link rel="shortcut icon" href="/images/img1.png">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "APingStudio晏几台";
+  mashiro_option.author_name = "晏几台";
+  mashiro_option.site_url = "https://space.bilibili.com/331466888";
+  mashiro_option.v_appId = "DdsMXpMXVU9txs2JImBoeySP-gzGzoHsz";
+  mashiro_option.v_appKey = "Lwl1hTpDKgcYhvil6DWs7zoY";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://i.loli.net/2021/02/11/dFGIORg7k5VX9ha.jpg,https://i.loli.net/2021/02/11/x7ietRWXqHjLDy5.jpg,https://i.loli.net/2021/02/11/FgY4QpaLNSuvKce.jpg,https://i.loli.net/2021/02/11/32ZJYQhuV19sfgF.jpg,https://i.loli.net/2021/02/11/t2uDVHCXspacGgd.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-grid">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://space.bilibili.com/331466888">
+          <img src="/images/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Live your life with passion! With some drive!</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/nerdsman" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/lu-tao-85-50" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://i.loli.net/2021/02/11/vcisjJrS8a4Pnzd.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">APingStudio</span>
+            <span class="shironeko">晏几台</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/materials/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">Blender 新手入门基础教程(1-7集)</h1>
+            <p class="entry-census">晏几台&nbsp;·&nbsp;2022-4-21&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <p><meta name="referrer" content="no-referrer"><br>觉得笔记做得不错，关注我的哔哩哔哩：晏几台，一起学习！<br>群名称：独立游戏制作交流群 群   号：128043818<br>关注微信公众号:APingStudio，回复 Blender新手，领取教程pdf版本（带书签）</p>
+<h1 id="01-界面UI"><a href="#01-界面UI" class="headerlink" title="01 界面UI"></a>01 界面UI</h1><table>
+<thead>
+<tr>
+<th>鼠标中键</th>
+<th>旋转</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shift+中键</td>
+<td>平移</td>
+</tr>
+<tr>
+<td>ctrl+中键</td>
+<td>缩放</td>
+</tr>
+<tr>
+<td>alt+中键</td>
+<td>自动吸附角度</td>
+</tr>
+<tr>
+<td>shift+鼠标左键</td>
+<td>多选</td>
+</tr>
+<tr>
+<td>ctrl+右键</td>
+<td>套索</td>
+</tr>
+<tr>
+<td>ctrl+shift+鼠标右键</td>
+<td>取消套索</td>
+</tr>
+<tr>
+<td>G</td>
+<td>跟鼠标跑</td>
+</tr>
+<tr>
+<td>G+X</td>
+<td>吸到X轴</td>
+</tr>
+<tr>
+<td>alt+R</td>
+<td>旋转清零，G,S同理</td>
+</tr>
+<tr>
+<td>ctrl+alt+q</td>
+<td>能迅速切换到四个视角模式</td>
+</tr>
+<tr>
+<td>N</td>
+<td>打开/关闭 小工具栏</td>
+</tr>
+<tr>
+<td>shift+右键</td>
+<td>设置 3D Cursor</td>
+</tr>
+<tr>
+<td>shift+z</td>
+<td>切换到透明网格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="修改初始参数"><a href="#修改初始参数" class="headerlink" title="修改初始参数"></a>修改初始参数</h2><p>shift +a 添加mesh<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615427700382-a410fd6b-8a40-4502-bc73-7342c2d3fe2c.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=282&amp;id=aErZW&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=564&amp;originWidth=471&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=81965&amp;status=done&amp;style=none&amp;title=&amp;width=235.5" alt="image.png"><br>左下角会出现<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615427838080-6ff0f5ef-9511-4614-b2b4-a9dc74dbd05d.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=217&amp;id=H35Ty&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=433&amp;originWidth=380&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=40046&amp;status=done&amp;style=none&amp;title=&amp;width=190" alt="image.png"><br>我发现：初始参数设好，定点数那些，就不能修改啦！<br><a name="GHd1q"></a></p>
+<h2 id="自动平滑"><a href="#自动平滑" class="headerlink" title="自动平滑"></a>自动平滑</h2><p>默认是shake flat<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615428249053-ae23fe66-4075-4934-8ee1-f66f9fdf563e.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=495&amp;id=BUD4H&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=990&amp;originWidth=1298&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=236108&amp;status=done&amp;style=none&amp;title=&amp;width=649" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615428277827-41cb6516-458f-4de0-83f0-73191715cb63.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=310&amp;id=J02PT&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=620&amp;originWidth=531&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=74006&amp;status=done&amp;style=none&amp;title=&amp;width=265.5" alt="image.png"><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615428351619-a56586a9-fa9d-46ae-9deb-e529b39c2f05.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=372&amp;id=bdteq&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=743&amp;originWidth=969&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=114356&amp;status=done&amp;style=none&amp;title=&amp;width=484.5" alt="image.png"><br>如果把auto smooth关掉！<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615428476770-221853a2-2950-492f-a29f-a00c38d931ef.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=413&amp;id=Ldfjm&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=825&amp;originWidth=1301&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=269812&amp;status=done&amp;style=none&amp;title=&amp;width=650.5" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615430510427-c51ab036-9d49-434a-bd13-3da944b7b43a.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=231&amp;id=E6JxI&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=462&amp;originWidth=340&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=49728&amp;status=done&amp;style=none&amp;title=&amp;width=170" alt="image.png"><br><a name="eghql"></a></p>
+<h2 id="看透模型"><a href="#看透模型" class="headerlink" title="看透模型"></a>看透模型</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615430639003-12e2eb97-26a0-4dfb-a662-fedbc6a94ae9.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=427&amp;id=z36ke&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=854&amp;originWidth=1015&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=236466&amp;status=done&amp;style=none&amp;title=&amp;width=507.5" alt="image.png"><br><a name="iJAov"></a></p>
+<h1 id="02-材质渲染入门"><a href="#02-材质渲染入门" class="headerlink" title="02 材质渲染入门"></a>02 材质渲染入门</h1><table>
+<thead>
+<tr>
+<th>0键</th>
+<th>进入摄像机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a name="OOl0m"></a></p>
+<h2 id="调整摄像机视角"><a href="#调整摄像机视角" class="headerlink" title="调整摄像机视角"></a>调整摄像机视角</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615431444823-a172747c-5c3f-460d-9bf9-b972428623f7.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=395&amp;id=psVgK&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=790&amp;originWidth=576&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=133112&amp;status=done&amp;style=none&amp;title=&amp;width=288" alt="image.png">以摄像机的视角移动</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615431665333-5e04f15b-a077-4d77-b797-5b6d5e8e8665.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=521&amp;id=UuPKq&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=1042&amp;originWidth=1920&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=929237&amp;status=done&amp;style=none&amp;title=&amp;width=960" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615431783386-72aad5e6-7bb7-4c5d-957e-49bab613013f.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=440&amp;id=pvdFH&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=879&amp;originWidth=1633&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=781730&amp;status=done&amp;style=none&amp;title=&amp;width=816.5" alt="image.png"><br><a name="QqWHT"></a></p>
+<h2 id="不同视图"><a href="#不同视图" class="headerlink" title="不同视图"></a>不同视图</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615431877148-8c9e3570-c202-4f87-bf8e-16918c10956f.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=357&amp;id=QzHqE&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=714&amp;originWidth=1173&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=590366&amp;status=done&amp;style=none&amp;title=&amp;width=586.5" alt="image.png">    <br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615431892451-c756e477-8c10-4116-b074-f08fa4ac043a.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=340&amp;id=GwtsK&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=680&amp;originWidth=1330&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=456974&amp;status=done&amp;style=none&amp;title=&amp;width=665" alt="image.png"><br><a name="ngmwB"></a></p>
+<h2 id="材质"><a href="#材质" class="headerlink" title="材质"></a>材质</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615432167228-9028a4d2-6ba2-40d9-bfc8-c19abf684f72.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=447&amp;id=mzGKG&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=894&amp;originWidth=1599&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=662233&amp;status=done&amp;style=none&amp;title=&amp;width=799.5" alt="image.png"><br>metallic 金属感<br><a name="lfGEM"></a></p>
+<h2 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615432886780-cd445665-5831-4d42-9143-551707049914.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=495&amp;id=U8D0x&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=990&amp;originWidth=1486&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=730261&amp;status=done&amp;style=none&amp;title=&amp;width=743" alt="image.png"><br><a name="x8gtF"></a></p>
+<h2 id="反光"><a href="#反光" class="headerlink" title="反光"></a>反光</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615432992953-7c45fab6-6a8c-4c90-8cd5-f65268f6544d.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=469&amp;id=eyeeu&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=938&amp;originWidth=1518&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=1038852&amp;status=done&amp;style=none&amp;title=&amp;width=759" alt="image.png"><br><a name="uyIR8"></a></p>
+<h2 id="Eevee和Cycle渲染器最大的区别"><a href="#Eevee和Cycle渲染器最大的区别" class="headerlink" title="Eevee和Cycle渲染器最大的区别"></a>Eevee和Cycle渲染器最大的区别</h2><p>Eevee缺少<img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615433306007-4bb36e30-8d81-411f-85f5-3b926c53a0fb.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=399&amp;id=TwOLv&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=797&amp;originWidth=451&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=80095&amp;status=done&amp;style=none&amp;title=&amp;width=225.5" alt="image.png"><br><a name="8uHvD"></a></p>
+<h2 id="两物体接近地方的阴影"><a href="#两物体接近地方的阴影" class="headerlink" title="两物体接近地方的阴影"></a>两物体接近地方的阴影</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615433393006-995be2bc-6f44-485e-849b-3a341681314d.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=214&amp;id=WEnW4&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=427&amp;originWidth=386&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=33906&amp;status=done&amp;style=none&amp;title=&amp;width=193" alt="image.png"><br><a name="Zgc2D"></a></p>
+<h2 id="渲染-1"><a href="#渲染-1" class="headerlink" title="渲染"></a>渲染</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615433749872-c797380a-316b-41c2-879d-0e9464f1acbb.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=495&amp;id=Lj49Z&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=989&amp;originWidth=1868&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=884923&amp;status=done&amp;style=none&amp;title=&amp;width=934" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615434404208-224f6b9a-06bf-4c95-bfcf-2054b3590fd7.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=517&amp;id=otNDf&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=1034&amp;originWidth=1904&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=1929578&amp;status=done&amp;style=none&amp;title=&amp;width=952" alt="image.png"><br><a name="B0fTx"></a></p>
+<h1 id="03-场景预览"><a href="#03-场景预览" class="headerlink" title="03 场景预览"></a>03 场景预览</h1><p><a name="vnSbM"></a></p>
+<h1 id="04-建模P1"><a href="#04-建模P1" class="headerlink" title="04 建模P1"></a>04 建模P1</h1><p>S+Y 沿Y轴缩放<br>前视图——1，右视图——3，顶视图——7，底视图——9<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615511912605-82d7f35a-1739-48c2-8ca3-dc4dce36bce4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=410&amp;id=V3Q81&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=820&amp;originWidth=1139&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=110448&amp;status=done&amp;style=none&amp;title=&amp;width=569.5" alt="image.png"><br>编辑模式可以细化调整！<br>Ctrl+tab键，可以快速进入各种模式，我的要加ctrl（版本 2.91）<br>Ctrl+R键 环切（loop cut）<br>bevel 工具：一根线切成两根线的样子<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615518286311-1f46e048-3dda-4619-887c-162aad0ce387.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=475&amp;id=mROIk&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=950&amp;originWidth=1552&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=329847&amp;status=done&amp;style=none&amp;title=&amp;width=776" alt="image.png"><br>进入透明模式才可以选后面的面哦！<br>按S+x中心缩小   <br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615519072419-bc950f93-df95-4b23-9308-8b67b548ba02.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=346&amp;id=DxnZx&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=692&amp;originWidth=848&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=212163&amp;status=done&amp;style=none&amp;title=&amp;width=424" alt="image.png"><br><a name="vUq5U"></a></p>
+<h2 id="细分Subdivide"><a href="#细分Subdivide" class="headerlink" title="细分Subdivide"></a>细分Subdivide</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615519336885-40ab5acf-3d3a-4dcc-a189-9f6213039b93.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=419&amp;id=grVcs&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=837&amp;originWidth=518&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=87261&amp;status=done&amp;style=none&amp;title=&amp;width=259" alt="image.png"><br><a name="2d2RH"></a></p>
+<h2 id><a href="#" class="headerlink" title></a><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615519372283-5be034e5-3c4e-417c-acc4-17c75b50e550.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=453&amp;id=GgwWT&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=905&amp;originWidth=650&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=112576&amp;status=done&amp;style=none&amp;title=&amp;width=325" alt="image.png"></h2><p><a name="bn6eO"></a></p>
+<h2 id="旋转90度"><a href="#旋转90度" class="headerlink" title="旋转90度"></a>旋转90度</h2><p>r+9+0<br><a name="5zOAZ"></a></p>
+<h2 id="插入面"><a href="#插入面" class="headerlink" title="插入面"></a>插入面</h2><p>insert faces<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615520928878-8c7ef4ad-b2d9-48b5-a2e2-e761698646b1.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=338&amp;id=WjXxM&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=675&amp;originWidth=585&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=101416&amp;status=done&amp;style=none&amp;title=&amp;width=292.5" alt="image.png"><br><a name="9sAqU"></a></p>
+<h2 id="耳朵做对称"><a href="#耳朵做对称" class="headerlink" title="耳朵做对称"></a><strong>耳朵做对称</strong></h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615607265654-bf79be58-ee09-43fb-a720-2c217a2abf15.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=226&amp;id=sMZ7E&amp;originHeight=673&amp;originWidth=1641&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=550" alt><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615607265612-5351b34e-a610-4f80-beb4-1a1628818723.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=357&amp;id=BoeUF&amp;originHeight=393&amp;originWidth=743&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=674" alt><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615607265598-4e36f96a-9d47-41b5-bfa9-42da48691f1b.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=374&amp;id=WQGXd&amp;originHeight=635&amp;originWidth=355&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=209" alt></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615607265622-aee392d2-1719-4b77-8725-64a165f9a5f7.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=208&amp;id=cicwY&amp;originHeight=435&amp;originWidth=1150&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=550" alt><br><a name="wY4LN"></a></p>
+<h2 id="将头部所有东西绑定到一起"><a href="#将头部所有东西绑定到一起" class="headerlink" title="将头部所有东西绑定到一起"></a><strong>将头部所有东西绑定到一起</strong></h2><p>**<img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892539-d89082bd-e4f7-485c-95ed-9e3b896e1571.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=336&amp;id=bHxOn&amp;originHeight=336&amp;originWidth=527&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=527" alt><br>ctrl+p，选中头部<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612893309-44d0dd10-d477-4124-a5a9-4f6a4d28cd44.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=377&amp;id=nxk7C&amp;originHeight=377&amp;originWidth=406&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=406" alt><br>所有物体都多出一条曲线<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892415-e9864e34-3569-4ed9-9d23-7666caaf8237.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=380&amp;id=LsmCF&amp;originHeight=601&amp;originWidth=821&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=519" alt><br><a name="OV0Ik"></a></p>
+<h2 id="顶点删除"><a href="#顶点删除" class="headerlink" title="顶点删除"></a><strong>顶点删除</strong></h2><p>选中面，按x，按顶点删除<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892707-26dc70c2-744a-45f1-8042-023b535baf54.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=449&amp;id=R3bTs&amp;originHeight=449&amp;originWidth=317&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=317" alt><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892675-64479e6f-91fd-404a-8e0d-109dc65ed84a.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=319&amp;id=bfesD&amp;originHeight=319&amp;originWidth=396&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=396" alt></p>
+<p><a name="iC52Y"></a></p>
+<h2 id="根据线生成面"><a href="#根据线生成面" class="headerlink" title="根据线生成面"></a><strong>根据线生成面</strong></h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892416-6fc3f559-7885-41d8-b792-c1bb05e8f0fb.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=461&amp;id=lhsQr&amp;originHeight=829&amp;originWidth=590&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=328" alt><br><a name="41abN"></a></p>
+<h2 id="移动物体中心点"><a href="#移动物体中心点" class="headerlink" title="移动物体中心点"></a><strong>移动物体中心点</strong></h2><p>选中整体，在编辑模式下移动物体，再到物体模式下，就发现中心点位置改变了！<br><a name="rrSok"></a></p>
+<h1 id="05-建模P2"><a href="#05-建模P2" class="headerlink" title="05 建模P2"></a><strong>05 建模P2</strong></h1><p><a name="dxfGS"></a></p>
+<h2 id="竖构图"><a href="#竖构图" class="headerlink" title="竖构图"></a><strong>竖构图</strong></h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892450-eaa79d33-7be1-45f7-88cf-3eda1d397a22.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=355&amp;id=R3Yw1&amp;originHeight=818&amp;originWidth=1565&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=680" alt><br><a name="kNe9U"></a></p>
+<h2 id="关UI"><a href="#关UI" class="headerlink" title="关UI"></a><strong>关UI</strong></h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892448-6cf564f7-ec0b-4112-8136-2932c96a67d4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=460&amp;id=ytxGa&amp;originHeight=635&amp;originWidth=1273&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=922" alt><br><a name="lA4oj"></a></p>
+<h2 id="改相机焦距"><a href="#改相机焦距" class="headerlink" title="改相机焦距"></a><strong>改相机焦距</strong></h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892442-44083449-3c79-4363-b8ca-3aec7689f749.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=561&amp;id=D3awy&amp;originHeight=813&amp;originWidth=580&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=400" alt><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892484-c26d6172-396a-480e-aa9e-37e4585be393.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=593&amp;id=VkckQ&amp;originHeight=593&amp;originWidth=358&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=358" alt><br><a name="kIrsL"></a></p>
+<h2 id="摄像机构图"><a href="#摄像机构图" class="headerlink" title="摄像机构图"></a><strong>摄像机构图</strong></h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615612892457-9b818267-a187-4768-ab07-c518afdff3d1.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=435&amp;id=Ze1qz&amp;originHeight=677&amp;originWidth=341&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=0&amp;status=done&amp;style=none&amp;title=&amp;width=219" alt><br><a name="0f8xe"></a></p>
+<h2 id="分成两个视窗"><a href="#分成两个视窗" class="headerlink" title="分成两个视窗"></a>分成两个视窗</h2><p>鼠标移到右上角 ，会发现有个十字！<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615639565925-1c8ee5cc-a60f-4705-aa65-ae3c9b8fee31.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=112&amp;id=IR78d&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=224&amp;originWidth=431&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=31523&amp;status=done&amp;style=none&amp;title=&amp;width=215.5" alt="image.png"><br>按住，往左拖啊拖！<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615639603075-8675a85f-9a95-4829-8504-07ed595b2c05.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=372&amp;id=fmv35&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=744&amp;originWidth=1515&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=338112&amp;status=done&amp;style=none&amp;title=&amp;width=757.5" alt="image.png"><br><a name="pecTy"></a></p>
+<h2 id="隐藏左侧工具栏"><a href="#隐藏左侧工具栏" class="headerlink" title="隐藏左侧工具栏"></a>隐藏左侧工具栏</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615639666407-1ac92094-503f-4258-85f8-54c80781980f.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=238&amp;id=uq1jN&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=475&amp;originWidth=166&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=31854&amp;status=done&amp;style=none&amp;title=&amp;width=83" alt="image.png"><br><a name="PFqju"></a></p>
+<h2 id="shrink-fatten"><a href="#shrink-fatten" class="headerlink" title="shrink/fatten"></a>shrink/fatten</h2><p>往外凸或往里<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615641524260-9ef346e4-6471-4c66-8152-df342608a946.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=348&amp;id=Vn53O&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=696&amp;originWidth=662&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=347649&amp;status=done&amp;style=none&amp;title=&amp;width=331" alt="image.png"><br>此时，我们发现：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615728161593-aed08936-a03f-4fef-8ec9-38332ef9a9d5.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=400&amp;id=VBBgF&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=799&amp;originWidth=924&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=209242&amp;status=done&amp;style=none&amp;title=&amp;width=462" alt="image.png"><br>我们需要调整一下！<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615728307496-2ed04c8f-b18f-4abb-bdce-beec33cace47.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=467&amp;id=UhINc&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=934&amp;originWidth=1151&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=234608&amp;status=done&amp;style=none&amp;title=&amp;width=575.5" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615728389853-7228f843-0f00-4d7b-afcb-657f14048366.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=392&amp;id=eX21P&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=784&amp;originWidth=792&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=81575&amp;status=done&amp;style=none&amp;title=&amp;width=396" alt="image.png"><br><a name="UJSug"></a></p>
+<h2 id="快速选面（同时去掉不需要的面）"><a href="#快速选面（同时去掉不需要的面）" class="headerlink" title="快速选面（同时去掉不需要的面）"></a>快速选面（同时去掉不需要的面）</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615728757401-9b0b40f2-550e-433f-ab0c-3adb5da044e4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=130&amp;id=NPhNv&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=259&amp;originWidth=810&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=131759&amp;status=done&amp;style=none&amp;title=&amp;width=405" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615728821980-898cb0e2-c03a-41ba-95ce-18e08ca282c0.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=223&amp;id=QxZn8&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=446&amp;originWidth=735&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=202680&amp;status=done&amp;style=none&amp;title=&amp;width=367.5" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615729015022-1e2722af-b81d-42c3-bc53-c33c61ee6ec2.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=424&amp;id=EjRkM&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=848&amp;originWidth=801&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=110709&amp;status=done&amp;style=none&amp;title=&amp;width=400.5" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615729092218-342b1c8c-a5b1-4c2b-b55f-729e3d41297f.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=254&amp;id=CSx0K&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=508&amp;originWidth=489&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=28554&amp;status=done&amp;style=none&amp;title=&amp;width=244.5" alt="image.png"><br><a name="OzWrX"></a></p>
+<h2 id="loop-cut一条线挤出两条线"><a href="#loop-cut一条线挤出两条线" class="headerlink" title="loop cut一条线挤出两条线"></a>loop cut一条线挤出两条线</h2><p>ctrl+shift+r<br>模型重复<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615729960357-219648e5-62d1-4727-a0ae-f5d7ed4679f4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=252&amp;id=CAUCl&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=504&amp;originWidth=406&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=20029&amp;status=done&amp;style=none&amp;title=&amp;width=203" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615729980955-3ceeedca-5b99-4971-a653-479b503349c2.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=207&amp;id=fxh0c&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=414&amp;originWidth=657&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=80983&amp;status=done&amp;style=none&amp;title=&amp;width=328.5" alt="image.png"><br><a name="Pds0b"></a></p>
+<h2 id="多个物体设置到同一parent（之前讲过）"><a href="#多个物体设置到同一parent（之前讲过）" class="headerlink" title="多个物体设置到同一parent（之前讲过）"></a>多个物体设置到同一parent（之前讲过）</h2><p>shift选中多个（记得选中大盖子为parent），或者框选，然后ctrl+p，然后就可以大盖子一起放大缩小了！<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615731680628-cdc9122c-3929-40a7-8c61-c4aea154864d.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=136&amp;id=r7HdH&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=272&amp;originWidth=275&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=42764&amp;status=done&amp;style=none&amp;title=&amp;width=137.5" alt="image.png"><br><a name="G5Pyg"></a></p>
+<h2 id="多mesh分组（collection）"><a href="#多mesh分组（collection）" class="headerlink" title="多mesh分组（collection）"></a>多mesh分组（collection）</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615772337870-9364f29b-49d1-4df3-b967-deaa70de47d6.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=289&amp;id=EmK8k&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=578&amp;originWidth=685&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=81069&amp;status=done&amp;style=none&amp;title=&amp;width=342.5" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615772401309-d2135cfb-0e69-470b-b92f-30c16aa66710.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=235&amp;id=eejfE&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=469&amp;originWidth=515&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=106141&amp;status=done&amp;style=none&amp;title=&amp;width=257.5" alt="image.png"><br><a name="e4r57"></a></p>
+<h2 id="手动对称"><a href="#手动对称" class="headerlink" title="手动对称"></a>手动对称</h2><p>ctrl+J绑定到一起<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615774064684-2bc1d3d0-7068-43e4-9d35-a8995b22d342.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=251&amp;id=ptFDk&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=501&amp;originWidth=696&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=127873&amp;status=done&amp;style=none&amp;title=&amp;width=348" alt="image.png"><br>ctrl+m对称操作<br><a name="efT9g"></a></p>
+<h2 id="穿透选择"><a href="#穿透选择" class="headerlink" title="穿透选择"></a>穿透选择</h2><p>注意线框模式下，只有勾选这个，才可以穿透选中！<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615777082021-9d9af6e9-aa7c-4092-86ac-8723f16958af.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=156&amp;id=WnmD6&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=312&amp;originWidth=330&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=26742&amp;status=done&amp;style=none&amp;title=&amp;width=165" alt="image.png"><br><a name="wxhZy"></a></p>
+<h1 id="06-材质配色"><a href="#06-材质配色" class="headerlink" title="06 材质配色"></a>06 材质配色</h1><p><a name="HQEf8"></a></p>
+<h2 id="添加材质"><a href="#添加材质" class="headerlink" title="添加材质"></a>添加材质</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615799877032-d118619d-6306-4a8d-964e-aa6d484c3f27.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=268&amp;id=BhUZ5&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=535&amp;originWidth=994&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=141805&amp;status=done&amp;style=none&amp;title=&amp;width=497" alt="image.png"><br><a name="FKSfN"></a></p>
+<h2 id="poke-face"><a href="#poke-face" class="headerlink" title="poke face"></a>poke face</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615800008384-606bec3f-2ee9-4608-ad47-9dccb9dfd1c4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=249&amp;id=qsfq0&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=498&amp;originWidth=549&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=61863&amp;status=done&amp;style=none&amp;title=&amp;width=274.5" alt="image.png"><br><a name="Ob5Fx"></a></p>
+<h2 id="进入线框模式快捷"><a href="#进入线框模式快捷" class="headerlink" title="进入线框模式快捷"></a>进入线框模式快捷</h2><p>按z，选择进入线框模式<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615800386829-d10c6fe4-dafd-4124-bb92-e7b4d9e796a8.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=261&amp;id=I9VH2&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=522&amp;originWidth=704&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=116836&amp;status=done&amp;style=none&amp;title=&amp;width=352" alt="image.png"><br><a name="e8NY4"></a></p>
+<h2 id="线上加个点（细分），点跟线动"><a href="#线上加个点（细分），点跟线动" class="headerlink" title="线上加个点（细分），点跟线动"></a>线上加个点（细分），点跟线动</h2><p>g：点随便移动<br>g + g：点沿着线移动<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615800783210-ba72d4c2-9c78-4ac0-a330-37548be526fd.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=162&amp;id=am9pY&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=324&amp;originWidth=333&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=8138&amp;status=done&amp;style=none&amp;title=&amp;width=166.5" alt="image.png"><br><a name="zN0r8"></a></p>
+<h2 id="两点连线"><a href="#两点连线" class="headerlink" title="两点连线"></a>两点连线</h2><p>点击两个点，按j连线<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615801208333-dd79b019-55ec-4490-aa67-eaa13248dc36.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=201&amp;id=ZURVq&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=401&amp;originWidth=476&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=88118&amp;status=done&amp;style=none&amp;title=&amp;width=238" alt="image.png"><br><a name="8Z0DM"></a></p>
+<h2 id="给面上色"><a href="#给面上色" class="headerlink" title="给面上色"></a>给面上色</h2><p>加入同一物体的另一个材质<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615801427191-4b10322a-c265-4017-8e63-969c79c230f4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=360&amp;id=V1qxL&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=720&amp;originWidth=941&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=150928&amp;status=done&amp;style=none&amp;title=&amp;width=470.5" alt="image.png"><br><a name="sUcwb"></a></p>
+<h2 id="圈选"><a href="#圈选" class="headerlink" title="圈选"></a>圈选</h2><p>L<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615802268844-fc722024-4686-480c-affd-363f71b19302.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=176&amp;id=Vz9XD&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=351&amp;originWidth=339&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=80453&amp;status=done&amp;style=none&amp;title=&amp;width=169.5" alt="image.png"><br><a name="Zk6lp"></a></p>
+<h2 id="基于之前选区再扩一层"><a href="#基于之前选区再扩一层" class="headerlink" title="基于之前选区再扩一层"></a>基于之前选区再扩一层</h2><p>ctrl +<br><a name="AHA7B"></a></p>
+<h1 id="07-打光渲染"><a href="#07-打光渲染" class="headerlink" title="07 打光渲染"></a>07 打光渲染</h1><p><a name="jrfhc"></a></p>
+<h2 id="关掉所有颜色（方便打光）"><a href="#关掉所有颜色（方便打光）" class="headerlink" title="关掉所有颜色（方便打光）"></a>关掉所有颜色（方便打光）</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615804931850-82f24d99-71cb-42f9-ac32-e60775485285.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=299&amp;id=Lk2Mk&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=598&amp;originWidth=469&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=58661&amp;status=done&amp;style=none&amp;title=&amp;width=234.5" alt="image.png"><br><a name="So867"></a></p>
+<h2 id="添加天光"><a href="#添加天光" class="headerlink" title="添加天光"></a>添加天光</h2><p>shift + a<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615805102549-469e5c3f-5753-4fa4-ad72-59ab13f58d0d.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=279&amp;id=e8IKA&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=557&amp;originWidth=489&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=59791&amp;status=done&amp;style=none&amp;title=&amp;width=244.5" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615805229673-d030d732-e725-4536-a11c-625949ce03b4.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=322&amp;id=wlCk2&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=644&amp;originWidth=432&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=77522&amp;status=done&amp;style=none&amp;title=&amp;width=216" alt="image.png"><br><a name="bW9UW"></a></p>
+<h2 id="调出背景"><a href="#调出背景" class="headerlink" title="调出背景"></a>调出背景</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615805311210-7588e978-069f-49e4-9e53-fdea2b432b7e.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=341&amp;id=zB0wU&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=681&amp;originWidth=436&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=89512&amp;status=done&amp;style=none&amp;title=&amp;width=218" alt="image.png"><br><a name="Dfr0S"></a></p>
+<h2 id="alt-d"><a href="#alt-d" class="headerlink" title="alt+d"></a>alt+d</h2><p>改变一个，源物体也跟着变<br><a name="Tc4Bz"></a></p>
+<h2 id="反光-1"><a href="#反光-1" class="headerlink" title="反光"></a>反光</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615806134201-cfaa7707-bac2-4ce8-9ca2-711800bc43f5.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=206&amp;id=ULvFi&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=412&amp;originWidth=428&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=45187&amp;status=done&amp;style=none&amp;title=&amp;width=214" alt="image.png"><br><a name="tFTvq"></a></p>
+<h2 id="把玻璃改成发光体"><a href="#把玻璃改成发光体" class="headerlink" title="把玻璃改成发光体"></a>把玻璃改成发光体</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/12595208/1615807363074-be9b02a1-a202-491f-ba66-d46e119d54ae.png#crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;height=343&amp;id=EJnz1&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=686&amp;originWidth=998&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=319689&amp;status=done&amp;style=none&amp;title=&amp;width=499" alt="image.png"></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="undefined"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2021/02/03/linux基础/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                linux基础</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "DdsMXpMXVU9txs2JImBoeySP-gzGzoHsz",
+        appKey: "Lwl1hTpDKgcYhvil6DWs7zoY",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="apingstudio.xyz" class="profile gravatar"><img src="https://img.gejiba.com/images/8d0be4d2b6926b9a5a9c28aae77ae34b.md.jpg" itemprop="image" alt="晏几台" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="apingstudio.xyz" itemprop="url" rel="author">晏几台</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 RobertCarlson<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Powered by Hexo, Hosted by Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/nerdsman/cdn","name":"bookcut.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/nerdsman/cdn","name":"bookcut.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="/images/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">APingStudio晏几台</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/nerdsman" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="/#" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=406960301&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/materials/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+    mini="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

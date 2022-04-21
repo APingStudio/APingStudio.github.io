@@ -243,23 +243,9 @@
                       </li>
                     
                       <li>
-                        <a href="/bangumi/">
-                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                          番组
-                        </a>
-                      </li>
-                    
-                      <li>
                         <a href="/music/">
                           <i class="fa fa-headphones" aria-hidden="true"></i>
                           歌单
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/tags/图集/">
-                          <i class="fa fa-photo" aria-hidden="true"></i>
-                          图集
                         </a>
                       </li>
                     
@@ -272,16 +258,6 @@
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
                     留言板
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/links/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-                    友人帐
                   </span>
                 </a>
                 
@@ -311,20 +287,6 @@
                         <a href="/about/">
                           <i class="fa fa-meetup" aria-hidden="true"></i>
                           我？
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/theme-sakura/">
-                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
-                          主题
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/lab/">
-                          <i class="fa fa-cogs" aria-hidden="true"></i>
-                          Lab
                         </a>
                       </li>
                     
@@ -678,7 +640,6 @@ void test01()
     *p2 = 30;
     printf(&quot;b = %d\n&quot;, b); //间接修改成功，C语言下const修饰的局部常量为伪常量
 }
-
 </code></pre>
 <p><strong>结论：</strong> </p>
 <p>​    全局修改失败，局部修改成功</p>
@@ -1701,7 +1662,6 @@ void test01()
     printf(&quot;P1 姓名 ： %s, 年龄： %d\n&quot;, p1.name, p1.age);
     printf(&quot;P2 姓名 ： %s, 年龄： %d\n&quot;, p2.name, p2.age);
 }
-
 </code></pre>
 <p>6.2.2 结构体包含指针的情况</p>
 <pre><code class="C">struct Person2
@@ -2012,7 +1972,6 @@ void test02()
     //关闭文件
     fclose(fp);
 }
-
 </code></pre>
 <p>注：==EOF==为文件结束标志，可以用来判断文件是否读取到文件尾</p>
 <h4 id="7-4-2-按行方式读写"><a href="#7-4-2-按行方式读写" class="headerlink" title="7.4.2 按行方式读写"></a>7.4.2 按行方式读写</h4><p><strong>写文件 fputs</strong></p>
@@ -2196,11 +2155,12 @@ void test01(){
 </code></pre>
 <h3 id="7-5-文件指针移动"><a href="#7-5-文件指针移动" class="headerlink" title="7.5 文件指针移动"></a>7.5 文件指针移动</h3><p>文件指针移动这里主要介绍3个函数</p>
 <ul>
-<li>rewind</li>
-</ul>
-<ul>
-<li>fseek</li>
-<li>ftell      </li>
+<li><p>rewind</p>
+</li>
+<li><p>fseek</p>
+</li>
+<li><p>ftell      </p>
+</li>
 </ul>
 <h4 id="7-5-1-rewind"><a href="#7-5-1-rewind" class="headerlink" title="7.5.1 rewind"></a>7.5.1 rewind</h4><p>函数原型：<code>void rewind(FILE *stream );</code></p>
 <p>功能：把文件流（文件光标）的读写位置移动到文件开头</p>
@@ -2266,7 +2226,6 @@ void test01(){
 
     fclose(file_read);
 }
-
 </code></pre>
 <h4 id="7-5-3-ftell"><a href="#7-5-3-ftell" class="headerlink" title="7.5.3 ftell"></a>7.5.3 ftell</h4><p>函数原型：<code>long ftell(FILE *stream);</code></p>
 <p>功能： 获取文件流（文件光标）的读写位置</p>
@@ -2315,7 +2274,6 @@ $英雄的防御力
 heroDef:99999
 $英雄的简介
 heroInfo:无敌
-
 </code></pre>
 <h2 id="8-函数指针"><a href="#8-函数指针" class="headerlink" title="8 函数指针"></a>8 函数指针</h2><h3 id="8-1-函数指针概念"><a href="#8-1-函数指针概念" class="headerlink" title="8.1 函数指针概念"></a>8.1 函数指针概念</h3><p>函数指针：函数名称就是函数的入口地址，我们可以通过函数指针去指向函数的入口地址</p>
 <pre><code class="C">void func()
@@ -2695,10 +2653,10 @@ int myadd(int a, int b)
 <h3 id="10-3-动态库的配置与使用"><a href="#10-3-动态库的配置与使用" class="headerlink" title="10.3 动态库的配置与使用"></a>10.3 动态库的配置与使用</h3><h4 id="10-3-1-静态库优缺点"><a href="#10-3-1-静态库优缺点" class="headerlink" title="10.3.1 静态库优缺点"></a>10.3.1 静态库优缺点</h4><p>本章节主要讲的内容是动态库，主要是因为静态库缺点明显，利小于弊</p>
 <p>优点：</p>
 <ul>
-<li>静态库在程序的链接阶段被复制到了程序中</li>
-</ul>
-<ul>
-<li>程序在运行时与库再无瓜葛，移植方便</li>
+<li><p>静态库在程序的链接阶段被复制到了程序中</p>
+</li>
+<li><p>程序在运行时与库再无瓜葛，移植方便</p>
+</li>
 </ul>
 <p>缺点：</p>
 <ul>
@@ -3205,23 +3163,9 @@ $(document).ready(function() {
               </li>
             
               <li>
-                <a href="/bangumi/">
-                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                  番组
-                </a>
-              </li>
-            
-              <li>
                 <a href="/music/">
                   <i class="fa fa-headphones" aria-hidden="true"></i>
                   歌单
-                </a>
-              </li>
-            
-              <li>
-                <a href="/tags/图集/">
-                  <i class="fa fa-photo" aria-hidden="true"></i>
-                  图集
                 </a>
               </li>
             
@@ -3234,16 +3178,6 @@ $(document).ready(function() {
           <span class="faa-parent animated-hover">
             <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
             留言板
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/links/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-            友人帐
           </span>
         </a>
         
@@ -3273,20 +3207,6 @@ $(document).ready(function() {
                 <a href="/about/">
                   <i class="fa fa-meetup" aria-hidden="true"></i>
                   我？
-                </a>
-              </li>
-            
-              <li>
-                <a href="/theme-sakura/">
-                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
-                  主题
-                </a>
-              </li>
-            
-              <li>
-                <a href="/lab/">
-                  <i class="fa fa-cogs" aria-hidden="true"></i>
-                  Lab
                 </a>
               </li>
             
